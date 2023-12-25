@@ -55,7 +55,7 @@ function App() {
           <h2 className="wish">
             Merry Christmas &amp; <br /> Happy new year</h2>
           <p style={{ color: 'green', fontFamily: 'greet, "Times New Roman", serif' }}>{wishes}.</p>
-          <p>by: <span style={{ fontWeight: 'bold', color: 'red' }}>{name}.</span></p>
+          <p>From: <span style={{ fontWeight: 'bold', color: 'red' }}>{name}.</span></p>
           <img src="img/cap.png" style={{ width: '100px', textAlign: 'center' }} alt="" />
         </div>
       </div>

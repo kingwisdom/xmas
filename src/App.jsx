@@ -8,6 +8,7 @@ function App() {
 
   const [name, setName] = useState("")
   const [wishes, setWishes] = useState("")
+  const [celebrate, setCelebrate] = useState("Merry Christmas")
   const [image, setImage] = useState("")
   const [convertedImg, setConvertedImg] = useState("")
 
@@ -42,28 +43,36 @@ function App() {
   return (
     <div style={{ background: 'url("https://media.macphun.com/img/uploads/macphun/blog/1247/christmasphoto.jpg") no-repeat', height: '100vh' }}>
       <div style={{ backgroundColor: '#fff', opacity: '0.8' }}>
-        <a href='#' className='btn btn-warning m-2' onClick={captureDivAsImage}>Share Now</a>
+        <a href='#' className='btn btn-warning m-2' onClick={captureDivAsImage}>Generate</a>
         <div className="mx-auto text-center" style={{ width: '350px', border: '1px solid #fff' }} ref={divRef}>
           <div className='d-flex'>
             <img src="img/red-ball.png" alt="" style={{ width: '200px', textAlign: 'center' }} />
             <img src="img/red-ball.png" alt="" style={{ width: '200px', textAlign: 'center' }} />
           </div>
-          <div className="mx-auto" style={{ height: '150px', width: '150px', backgroundColor: 'transparent', borderRadius: '100px', marginTop: '-20px' }}>
+          {/* <div className="mx-auto" style={{ height: '150px', width: '150px', backgroundColor: 'transparent', borderRadius: '100px', marginTop: '-20px' }}>
             <img src={file} className="image-responsive" style={{ width: '80%', borderRadius: '30%' }} alt="" />
-            {/* <img src="img/user.png" className="image-responsive" style={{ width: '80%', borderRadius: '40%' }} alt="" /> */}
-          </div>
+          </div> */}
+          <img src="img/pngtree.png" style={{ width: '70px', position: 'absolute', left: '30%' }} alt="" />
+          <div className="mx-auto" style={{ height: '180px', width: '180px', overflow: 'hidden', borderRadius: '50%', marginTop: '-10px' }}>
+            <img
+              src={file}
+              className="image-responsive"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
+              alt=""
+            /></div>
           <h2 className="wish">
-            Merry Christmas &amp; <br /> Happy new year</h2>
-          <p style={{ color: 'green', fontFamily: 'greet, "Times New Roman", serif' }}>{wishes}.</p>
+            {celebrate}</h2>
+          <p style={{ color: 'green', fontFamily: 'greet, "Times New Roman", serif' }}>{wishes ? wishes : 'Write your message...'}.</p>
           <p>From: <span style={{ fontWeight: 'bold', color: 'red' }}>{name}.</span></p>
           <img src="img/cap.png" style={{ width: '100px', textAlign: 'center' }} alt="" />
+          <img src="img/clip-art.png" style={{ width: '100px' }} alt="" />
         </div>
       </div>
       <hr />
       <a href={convertedImg} target='_blank'>
         <img src={convertedImg} /></a>
       <button type="button" className="btn btn-success" style={{ position: 'absolute', top: 10, right: 10 }} data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Create Your Design
+        Customize Your Design
       </button>
       <div className="modal fade" id="exampleModal" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
@@ -78,8 +87,12 @@ function App() {
                 <textarea maxLength={230} className="form-control" id="exampleInputEmail1" onChange={(e) => setWishes(e.target.value)} aria-describedby="emailHelp"></textarea>
               </div>
               <div className="mb-3">
+                <label htmlFor="exampleInputPassword1" className="form-label">Celebration</label>
+                <input type="text" placeholder='e.g Christmas, Boxing day, new year e.t.c' onChange={(e) => setCelebrate(e.target.value)} className="form-control" id="exampleInputPassword1" />
+              </div>
+              <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">Your Name</label>
-                <input type="text" onChange={(e) => setName(e.target.value)} className="form-control" id="exampleInputPassword1" />
+                <input type="text" placeholder='by who?' onChange={(e) => setName(e.target.value)} className="form-control" id="exampleInputPassword1" />
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleInputPassword1" className="form-label">Your Image</label>

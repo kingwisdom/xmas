@@ -105,8 +105,8 @@ function App() {
             </div>
             <hr />
             {convertedImg && (<div className='d-flex container'>
-              <a href={convertedImg} target='_blank'>
-                <img src={convertedImg} /></a>
+
+              <img src={convertedImg} />
             </div>)}
 
           </div>

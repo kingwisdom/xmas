@@ -71,8 +71,8 @@ function App() {
         </div>
       </div>
       <hr />
-      <a href={convertedImg} target='_blank'>
-        <img src={convertedImg} /></a>
+
+      <img src={convertedImg} style={{ height: 250, width: 200 }} />
       <button type="button" className="btn btn-success" style={{ position: 'absolute', top: 10, right: 10 }} data-bs-toggle="modal" data-bs-target="#exampleModal">
         Customize Your Design
       </button>
@@ -106,7 +106,7 @@ function App() {
             <hr />
             {convertedImg && (<div className='d-flex container'>
 
-              <img src={convertedImg} />
+              <img src={convertedImg} style={{ height: 250, width: 200 }} />
             </div>)}
 
           </div>

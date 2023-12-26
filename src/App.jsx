@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import './App.css';
 import html2canvas from 'html2canvas';
-import { WhatsappShareButton } from 'react-share';
 
 function App() {
   const divRef = useRef(null);
@@ -52,7 +51,7 @@ function App() {
           {/* <div className="mx-auto" style={{ height: '150px', width: '150px', backgroundColor: 'transparent', borderRadius: '100px', marginTop: '-20px' }}>
             <img src={file} className="image-responsive" style={{ width: '80%', borderRadius: '30%' }} alt="" />
           </div> */}
-          <img src="img/pngtree.png" style={{ width: '70px', position: 'absolute', left: '30%' }} alt="" />
+          <img src="img/pngtree.png" style={{ width: '70px', position: 'absolute', left: '40%' }} alt="" />
           <div className="mx-auto" style={{ height: '180px', width: '180px', overflow: 'hidden', borderRadius: '50%', marginTop: '-10px' }}>
             <img
               src={file}
@@ -64,8 +63,11 @@ function App() {
             {celebrate}</h2>
           <p style={{ color: 'green', fontFamily: 'greet, "Times New Roman", serif' }}>{wishes ? wishes : 'Write your message...'}.</p>
           <p>From: <span style={{ fontWeight: 'bold', color: 'red' }}>{name}.</span></p>
-          <img src="img/cap.png" style={{ width: '100px', textAlign: 'center' }} alt="" />
-          <img src="img/clip-art.png" style={{ width: '100px' }} alt="" />
+          <div className="d-flex" style={{ margin: '0px 50px auto' }}>
+            <img src="img/cap.png" style={{ width: '70px', textAlign: 'center', marginRight: 20 }} alt="" />
+            <img src="img/clip-art.png" style={{ width: '70px' }} alt="" />
+            <img src="img/cap.png" style={{ width: '70px', textAlign: 'center', marginRight: 20 }} alt="" />
+          </div>
         </div>
       </div>
       <hr />

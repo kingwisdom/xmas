@@ -112,7 +112,9 @@ function App() {
           </div>
         </div>
       </div>
-
+      <footer style={{ position: 'absolute', bottom: 0, textAlign: 'center' }}>
+        &copy; 2023 Productdrive | kw
+      </footer>
     </div>
   );
 }
